@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #181e2b;
+  font-family: 'Red Hat Display';
+  color: white;
+
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#navigationButtons {
+  position: fixed;
+  z-index: 2;
+}
+
+.image-disable {
+  pointer-events: none;
+}
