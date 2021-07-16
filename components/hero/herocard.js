@@ -60,7 +60,7 @@ export const HeroCard = ({ status, statusColor, spotify }) => {
           Tahir Yusuf ESER
         </div>
         <div className="px-4 text-md w-96 text-gray-300 text-center lg:text-left lg:text-lg lg:px-0">
-          Hello, I'm junior coder. I started coding about{" "}
+          Hello, I'm Yusuf. I started coding about{" "}
           {new Date().getFullYear() - 2018} years ago. I'm interested in{" "}
           <Tippy content="Click me!">
             <a href="https://www.python.org">

@@ -1,7 +1,6 @@
 import { getPosts } from '../../posts/blog-posts'
 
-const posts = getPosts()
-
-export default (req, res) => {
+export default async (req, res) => {
+    const posts = await getPosts()
     res.json({ posts })
 }

@@ -23,7 +23,7 @@ export const Contact = () => {
     const usermessage = event.target.elements.userMessage.value;
 
     if (!username || !usermessage || !useremail) {
-      return toast.warning("Please complete all fields! ❌");
+      return toast.error("Please complete all fields! ❌");
     }
 
     window.open(

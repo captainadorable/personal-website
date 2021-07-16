@@ -18,16 +18,17 @@ const aboutText = (
     <br />
     <br />
     I've been interested in computer since my childhood. I love most computer
-    games, but some games are makes me angry. Like{" "}
-    <span className="text-red-400">VALORANT</span> or{" "}
-    <span className="text-red-400">LOL</span>. I started coding about{" "}
-    {new Date().getFullYear() - 2018} years ago. First I start with{" "}
+    games, but I usually play VALORANT, CSGO. I started coding about{" "}
+    {new Date().getFullYear() - 2018} years ago. First I started with{" "}
     <span className="text-yellow-200">Python</span> to learn basics. After a
-    while its started to feel boring. And I switched to{" "}
+    while python started to feel boring. And I switched to{" "}
     <span className="text-red-300">JavaScript</span> to make{" "}
     <span className="text-pink-400">Discord Bots</span>. After that I switched{" "}
     <span className="text-green-400">Unity</span> for make games. And now I make
-    websites. Very crazy huh? :)
+    websites.
+    <br />
+    <br />
+    BTW I am playing guitar. 😎
   </div>
 );
 

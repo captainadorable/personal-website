@@ -6,9 +6,14 @@ import { Navbar } from "../components/navbar/navbar";
 import { NextSeo } from "next-seo";
 import { Footer } from "../components/footer/footer";
 
+import { ParticleComponent } from "../components/particles/index";
+
 function Blog({ posts }) {
   return (
     <div>
+      <div id="particle-canvas">
+          <ParticleComponent />
+      </div>
       <NextSeo title="Blog" />
       <Navbar />
       <div className="grid grid-rows-4 gap-y-16 items-center justify-center pb-24">
@@ -29,7 +34,7 @@ function Blog({ posts }) {
             <div>
               <article className="prose prose-xl text-white text-center px-2 lg:text-left lg:px-0">
                 <ReactMarkdown
-                  children={`${post.details.default.slice(0, 200)}...`}
+                  children={`${post.details.slice(0, 200)}...`}
                 />
               </article>
             </div>
@@ -50,7 +55,7 @@ function Blog({ posts }) {
 }
 
 Blog.getInitialProps = async () => {
-  const res = await fetch(`https://captadorable.vercel.app/api/posts`);
+  const res = await fetch(`https://www.captadorable.me/api/posts`);
   const json = await res.json();
 
   return { posts: json.posts };

@@ -5,8 +5,9 @@ import Link from "next/link";
 import { Navbar } from "../components/navbar/navbar";
 import { NextSeo } from "next-seo";
 import { Footer } from "../components/footer/footer";
-
 import { Page404 } from "../components/404/404";
+
+import { ParticleComponent } from "../components/particles/index";
 
 const Post = ({ post }) => {
   if (!post) {
@@ -18,6 +19,9 @@ const Post = ({ post }) => {
   }
   return (
     <div>
+      <div id="particle-canvas">
+          <ParticleComponent />
+      </div>
       <NextSeo title={`${post.title} - Blog`} />
       <Navbar />
       <div className="flex justify-center pt-32 pb-24">
@@ -33,7 +37,7 @@ const Post = ({ post }) => {
             </Link>
             <div>
               <article className="prose prose-xl text-white">
-                <ReactMarkdown children={post.details.default} />
+                <ReactMarkdown children={post.details} />
               </article>
             </div>
             <span className="self-end text-gray-500">{post.date}</span>
@@ -46,7 +50,7 @@ const Post = ({ post }) => {
 };
 
 Post.getInitialProps = async ({ req, query }) => {
-  const res = await fetch(`https://captadorable.vercel.app/api/post/${query.postId}`);
+  const res = await fetch(`https://www.captadorable.me/api/post/${query.postId}`);
   const json = await res.json();
   return { post: json.post };
 };

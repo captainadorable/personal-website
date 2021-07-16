@@ -5,22 +5,29 @@ import { Repos } from "../components/repos/repos";
 import { Contact } from "../components/contact/contact";
 import { Footer } from "../components/footer/footer";
 import { NextSeo } from "next-seo";
+import { ParticleComponent } from "../components/particles/index";
+
 
 function Home({ repos, status, statusColor, spotify, song }) {
   return (
-    <div className="flex flex-col justify-center items-center content-center ">
-      <NextSeo title="Home" />
-      <Navbar />
-      <Hero
-        status={status}
-        statusColor={statusColor}
-        spotify={spotify}
-        song={song}
-      />
-      <About />
-      <Repos repos={repos} />
-      <Contact />
-      <Footer />
+    <div>
+        <div id="particle-canvas">
+          <ParticleComponent />
+        </div>
+      <div className="flex flex-col justify-center items-center content-center ">
+        <NextSeo title="Home" />
+        <Navbar />
+        <Hero
+          status={status}
+          statusColor={statusColor}
+          spotify={spotify}
+          song={song}
+        />
+        <About />
+        <Repos repos={repos} />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }
@@ -36,6 +43,7 @@ const axios = require("axios");
 Home.getInitialProps = async () => {
   //----------------------------------------------------------------------------------------------------------
   //GITHUB REPOS
+  console.log(process.env.DISCORD_ID)
   const repos = [];
   const data = (await axios.get(apiURL)).data;
 
