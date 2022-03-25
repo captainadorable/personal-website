@@ -6,14 +6,10 @@ import { Navbar } from "../components/navbar/navbar";
 import { NextSeo } from "next-seo";
 import { Footer } from "../components/footer/footer";
 
-import { ParticleComponent } from "../components/particles/index";
 
 function Blog({ posts }) {
   return (
     <div>
-      <div id="particle-canvas">
-          <ParticleComponent />
-      </div>
       <NextSeo title="Blog" />
       <Navbar />
       <div className="grid grid-rows-4 gap-y-16 items-center justify-center pb-24">

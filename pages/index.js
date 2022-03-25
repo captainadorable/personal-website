@@ -5,15 +5,11 @@ import { Repos } from "../components/repos/repos";
 import { Contact } from "../components/contact/contact";
 import { Footer } from "../components/footer/footer";
 import { NextSeo } from "next-seo";
-import { ParticleComponent } from "../components/particles/index";
 
 
 function Home({ repos, status, statusColor, spotify, song }) {
   return (
     <div>
-        <div id="particle-canvas">
-          <ParticleComponent />
-        </div>
       <div className="flex flex-col justify-center items-center content-center ">
         <NextSeo title="Home" />
         <Navbar />

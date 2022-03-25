@@ -18,7 +18,7 @@ const aboutText = (
     <br />
     <br />
     I've been interested in computer since my childhood. I love most computer
-    games, but I usually play VALORANT, CSGO. I started coding about{" "}
+    games, but I usually play <span className="text-blue-200">Brawlhalla</span>, <span className="text-red-400">VALORANT</span>. I started coding about{" "}
     {new Date().getFullYear() - 2018} years ago. First I started with{" "}
     <span className="text-yellow-200">Python</span> to learn basics. After a
     while python started to feel boring. And I switched to{" "}

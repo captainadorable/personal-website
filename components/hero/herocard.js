@@ -9,7 +9,7 @@ const avatarURL = "https://avatars.githubusercontent.com/u/66172845";
 
 export const HeroCard = ({ status, statusColor, spotify }) => {
   return (
-    <div className="flex flex-col space-x-4 self-center lg:flex-row">
+    <div className="flex flex-col space-x-0 lg:space-x-8 self-center lg:flex-row">
       <div className="flex flex-col">
         <Tilt options={{ reverse: false, scale: 1.05 }} className="self-center">
           <img
@@ -60,7 +60,7 @@ export const HeroCard = ({ status, statusColor, spotify }) => {
           Tahir Yusuf ESER
         </div>
         <div className="px-4 text-md w-96 text-gray-300 text-center lg:text-left lg:text-lg lg:px-0">
-          Hello, I'm Yusuf. I started coding about{" "}
+          Hello, I'm Yusuf. I have started coding about{" "}
           {new Date().getFullYear() - 2018} years ago. I'm interested in{" "}
           <Tippy content="Click me!">
             <a href="https://www.python.org">
@@ -81,7 +81,7 @@ export const HeroCard = ({ status, statusColor, spotify }) => {
           </Tippy>
         </div>
         <div className="px-4 text-md w-96 text-gray-300 text-center lg:text-left lg:text-lg lg:px-0">
-          Usually I work on different projects. Sometimes I make a game with{" "}
+          I usually work on different projects. Sometimes I make games with{" "}
           <span className="text-green-300">unity</span> or{" "}
           <span className="text-yellow-200">pygame</span>, sometimes I make a{" "}
           <span className="text-red-300">website</span>!
