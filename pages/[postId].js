@@ -7,7 +7,6 @@ import { NextSeo } from "next-seo";
 import { Footer } from "../components/footer/footer";
 import { Page404 } from "../components/404/404";
 
-import { ParticleComponent } from "../components/particles/index";
 
 const Post = ({ post }) => {
   if (!post) {
