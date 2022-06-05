@@ -5,9 +5,28 @@ import Link from "next/link";
 import { Navbar } from "../components/navbar/navbar";
 import { NextSeo } from "next-seo";
 import { Footer } from "../components/footer/footer";
+import { useEffect, useState } from "react";
 
 
-function Blog({ posts }) {
+function Blog() {
+  const [posts, setPosts] = useState({});
+  const [ready, setReady] = useState(false);
+
+
+  useEffect(async () => {
+    try {
+      const res = await fetch(`https://www.captadorable.me/api/posts`);
+      const json = await res.json();
+      setPosts(json.posts);
+      setReady(true);
+    }
+    catch (err) {
+      console.log(err);
+    }
+  }, []);
+
+  if (!ready) return <></>
+
   return (
     <div>
       <NextSeo title="Blog" />
@@ -49,12 +68,5 @@ function Blog({ posts }) {
     </div>
   );
 }
-
-Blog.getInitialProps = async () => {
-  const res = await fetch(`https://www.captadorable.me/api/posts`);
-  const json = await res.json();
-
-  return { posts: json.posts };
-};
 
 export default Blog;
